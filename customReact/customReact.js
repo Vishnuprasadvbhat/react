@@ -20,14 +20,14 @@ function customRender(reactElement, root){
   mainRoot.appendChild(domElement);
 
 }
-
 const reactElement = {
   type : 'a',
   props : {
     href : "https://google.com",
     target: '_blank'
   },
-  children : 'Click me to visit google'
+  children : 'Click me to visit google',
+  ano
 }
 
 
