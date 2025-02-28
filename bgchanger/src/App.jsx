@@ -1,33 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { useState } from "react"
+import Bar from "./components/Bar"
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [bg, setBg] = useState('olive')
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+     <div className="w-full h-screen duration-150" 
+     style={{backgroundColor: bg}}>
+        <div className="flex fixed flex-wrap justify-center bottom-12  inset-x-0 px-2">
+
+        <div className="fixed flex flex-wrap shadow-lg gap-5 bg-white rounded-full px-3 py-2 ">
+          <button onClick={() => setBg('red')} className="rounded-full outline-none text-white px-4 shadow-lg cursor-pointer" style={{backgroundColor: "red"}}>Red</button>
+          <button onClick={() => setBg('green')} className="rounded-full outline-none text-white px-4 shadow-lg cursor-pointer" style={{backgroundColor: "green"}}>Green</button>
+          <button onClick={() => setBg('yellow')} className="rounded-full outline-none text-black px-4 shadow-lg cursor-pointer" style={{backgroundColor: "yellow"}}>Yellow</button>
+          <button onClick={() => setBg('black')} className="rounded-full outline-none text-white px-4 shadow-lg cursor-pointer" style={{backgroundColor: "black"}}>Black</button>
+        </div>
+        </div>
+        </div>
     </>
   )
 }
