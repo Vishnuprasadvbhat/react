@@ -1,8 +1,12 @@
-# **Welcome to React from Scratch Repo**
+# **Welcome to React Learning**
 
-## **Here we mainly focus on how react works under the hood and tryna understand core concepts of react**
+ ![React](images/react-logo-png-react-js-logo-history-design-history-and-evolution-5500x3094.png)
+
+## **Our primary focus here is to explore how React operates behind the scenes and grasp its fundamental concepts.**
 
 ### **What is React?**
+![React Architecture](images/React-architecture-with-redux-store.webp)
+
 React is a JavaScript library for building user interfaces.It allows developers to create reusable UI components, making the development process more efficient and maintainable. 
 
 ## **Here's an overview of its key features:**
@@ -27,6 +31,8 @@ Yes, React uses the DOM, but it creates a virtual representation of the DOM (Vir
 
 ## **Virtual DOM**
 
+![React Dom](images/dom.png)
+
 ### **Does React still uses virtual Dom or Dom to track the frontend Structure if not what does it use now?**
 
 React still relies on the **Virtual DOM** (VDOM) as a core concept for efficiently tracking and updating the frontend structure. The Virtual DOM is essentially a lightweight representation of the real DOM. When changes occur in the UI, React first updates the Virtual DOM, compares it with the previous version (a process called "diffing"), and then determines the minimal set of updates required to apply to the real DOM. This approach optimizes performance, as manipulating the real DOM directly can be costly in terms of time and resources.
@@ -48,13 +54,15 @@ Before React Fiber, React used a **stack-based reconciliation algorithm** to upd
 The introduction of **React Fiber** replaced this stack-based approach with a more advanced scheduling model, allowing updates to be paused, prioritized, and resumed as needed. This made React much more performant and responsive for modern applications. Let me know if you'd like to explore this further or dive into Fiber's details!
 
 
-### **what is reconcillation algo?**
+### **what is Reconciliation algo?**
 
-The **reconciliation algorithm** in React is the process that determines how the UI should be updated to reflect changes in state or props. Essentially, it’s React’s method for figuring out the most efficient way to update the real DOM to match the Virtual DOM without rebuilding everything from scratch. Here's how it works conceptually:
+![Reconciliation](images/reconciliation.png)
 
-### **Key Steps in Reconciliation:**
+The **reconciliation algorithm** in React is the process that determines how the UI should be updated to reflect changes in state or props. Essentially, it’s React’s method for figuring out the most efficient way to update the real DOM to match the Virtual DOM without rebuilding everything from scratch. 
 
-1. **Virtual DOM Comparison:** When a component’s state or props change, React creates a new Virtual DOM tree. It then compares this new Virtual DOM tree to the previous one using a process known as "diffing."
+### **Here's how it works conceptually:**
+
+1. **Virtual DOM Comparison:** When a component’s state or props change, React creates a new Virtual DOM tree. It then compares this new Virtual DOM tree to the previous one using a process known as **"diffing"**.
 
 2. **Efficient Updates (Diffing Algorithm):**
    - React compares nodes in the Virtual DOM one by one. If it detects that a node has changed, it marks it for update.
@@ -74,7 +82,11 @@ Let me know if you'd like me to dive deeper into any of these points!
 
 ## **React Fiber Architecture** 
 
-Reference: [React Fibre Doc](https://github.com/acdlite/react-fiber-architecture)
+![Fibre Arch](images/react-fiber-architecture-1-1636956334.jpg)
+React Fiber is a significant improvement over the previous reconciliation algorithm. It introduces a more flexible and efficient way <br/>
+
+#### **Reference: [React Fibre Doc](https://github.com/acdlite/react-fiber-architecture)**
+
 ### **Which is new Algo and how does it work under the hood?**
 
 The "new algorithm" you're referring to is likely **React Fiber**, which was introduced with React 16. React Fiber is an advanced **reconciliation algorithm** that improves React's ability to update the DOM by making the process more flexible and efficient. Here's how Fiber works under the hood:
@@ -83,7 +95,7 @@ The "new algorithm" you're referring to is likely **React Fiber**, which was int
 
 ## **Introduction**
 
-### **What is React Fiber?
+### **What is React Fiber?**
 
 React Fiber is essentially a reimplementation of React's reconciliation algorithm, designed to break the update process into smaller, manageable units of work. The key idea is to allow React to work **incrementally** rather than processing updates all at once, which was the case with the previous stack-based algorithm.
 
