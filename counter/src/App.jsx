@@ -12,6 +12,9 @@ function App() {
   const addValue = () => {
     if (counter < 2){
       setCounter(counter+ 1);
+      setCounter(counter+ 1);
+      setCounter(counter+ 1);
+      setCounter(prev => {prev + 1})
       console.log("value incremented", counter);
     }
     
