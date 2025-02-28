@@ -138,3 +138,6 @@ Here’s a high-level explanation of how React Fiber processes updates:
 4. **Stack vs Linked List:**
    - Unlike the old stack-based algorithm, Fiber organizes components using a **linked list** structure. This structure allows React to pause work on one part of the tree, switch to another, and then come back to where it left off.
 
+### This was a brief explanation of React Fiber. For more details, you can explore the official React documentation.
+
+### However, the code provided can feel a bit overwhelming at first, it's written by the React team and is a bit dense. But, it's a great resource to learn from.
